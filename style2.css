@@ -6,3 +6,22 @@ div.active {
 a.active {
 	background: rosybrown;
 }
+
+
+.item {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	transform: translate3d(-50px,0px,0px);
+	padding-top: 20px
+}
+
+.item.active {
+	opacity: 1;
+	visibility: visible;
+	position:relative;
+	top: auto;
+	transition: .3s;
+	transform: translate3d(0px,0px,0px)
+}

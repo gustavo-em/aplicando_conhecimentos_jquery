@@ -48,25 +48,16 @@
 	text-align: center;
 	letter-spacing: 2px;
 	
-	background: #4daecb;
-	border: #604dcb;
+	background: #56CC9D;
 	border-radius: 4px;
+	border:#439e7a 3px solid;
 
 	justify-content:center;
+
 }
 
-.animar{
-	animation: ss 2s ease 0s ;
-	animation-fill-mode: forwards;
-}
 
-@keyframes ss{
-	to {
-		background: #d9dce3;
-		border: #604dcb;
-		border-radius: 4px;
-	}
-}
+
 
 .acima {
 	display:flex;
@@ -97,6 +88,13 @@
 		opacity: 1;
 	}
 	
+}
+
+.texto {
+	position: relative;
+	top: 7px;
+	color: #439e7a;
+
 }
 
 

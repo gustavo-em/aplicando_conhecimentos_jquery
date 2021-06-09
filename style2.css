@@ -1,27 +1,54 @@
-div.active {
+/* div.active {
 	background: #567bcc;
+	color: white;
+} */
+
+.active {
+	background: #56CC9D;
 	color: white;
 }
 
-a.active {
-	background: rosybrown;
-}
 
-
-.item {
+[data-conteudo] {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
 	top: 0px;
 	transform: translate3d(-50px,0px,0px);
-	padding-top: 20px
-}
+	padding-top: 20px;
+} 
 
-.item.active {
+[data-conteudo].active {
 	opacity: 1;
 	visibility: visible;
 	position:relative;
 	top: auto;
 	transition: .3s;
-	transform: translate3d(0px,0px,0px)
+	transform: translate3d(0px,0px,0px);
+}
+
+[data-conteudo].active1 {
+	opacity: 1;
+	visibility: visible;
+	position:relative;
+	top: auto;
+	transition: .3s;
+	transform: translate3d(0px,0px,0px);
+}
+
+.botao_ativar{
+	position: relative;
+	border: 4px solid;
+	padding: 20px;
+	margin: 20px;
+	width: 200px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+
+
+}
+
+html{
+	box-sizing: border-box;
 }

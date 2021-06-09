@@ -29,10 +29,10 @@ ul li a {
 	letter-spacing: 2px;
 }
 
-ul li a.active {
+/* ul li a.active {
 	background: #56CC9D;
 	color: white;
-}
+} */
 
 h1, h2, h3 {
 	font-family: 'Playfair Display';

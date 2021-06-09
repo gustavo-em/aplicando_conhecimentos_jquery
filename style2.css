@@ -27,28 +27,93 @@
 	transform: translate3d(0px,0px,0px);
 }
 
-[data-conteudo].active1 {
+[data-item].active {
 	opacity: 1;
-	visibility: visible;
-	position:relative;
-	top: auto;
 	transition: .3s;
 	transform: translate3d(0px,0px,0px);
 }
 
 .botao_ativar{
 	position: relative;
-	border: 4px solid;
 	padding: 20px;
 	margin: 20px;
 	width: 200px;
 	height: 20px;
 	display: flex;
 	align-items: center;
+	transform: translateX(-20px,0px,0px);
+	font-size: 16px;
+	font-family: 'Playfair Display';
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	
+	background: #4daecb;
+	border: #604dcb;
+	border-radius: 4px;
 
-
+	justify-content:center;
 }
+
+.animar{
+	animation: ss 2s ease 0s ;
+	animation-fill-mode: forwards;
+}
+
+@keyframes ss{
+	to {
+		background: #d9dce3;
+		border: #604dcb;
+		border-radius: 4px;
+	}
+}
+
+.acima {
+	display:flex;
+	justify-content: center;
+}
+
+
+.animar_scale {
+	margin: 30px 0px 0px 0px;
+	animation-fill-mode: forwards;
+	animation: qq 1.5s ease 0s infinite
+}
+
+@keyframes qq {
+	0%{
+		transform:scale(1);
+		transform:translateY(-50px);
+		opacity: 1;
+	}
+	50%{
+		transform:scale(1.1);
+		transform:translateY(0px);
+		opacity: 1;
+	}
+	100%{
+		transform:scale(1);
+		transform:translateY(-50px);
+		opacity: 1;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 html{
 	box-sizing: border-box;
 }
+

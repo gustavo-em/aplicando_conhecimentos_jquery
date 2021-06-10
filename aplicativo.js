@@ -57,3 +57,22 @@ $('.botao_ativar').on('mouseenter', function(){
     }
 })
 
+
+$('div.menu-cel').on('click', function(){
+    $('.navegacao').toggle('.nav-cel');
+})
+$('div.menu-cel').each(function(){
+    console.log($(window).width());
+})
+
+console.log(window.screen.width)
+
+
+document.body.onresize = function() {
+    if (document.body.clientWidth > 600) {
+        $('.nav-cel').show()
+    }
+    if (document.body.clientWidth <= 600) {
+        $('.nav-cel').hide()
+    }
+};

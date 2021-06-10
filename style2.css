@@ -143,7 +143,10 @@ html{
 .acima_tudo {
 	position: absolute;
 	top: 100px;
+	width: 100%;
 }
+
+
 
 
 @media (min-width: 601px) and (max-width: 1300px){
@@ -175,7 +178,7 @@ html{
 		margin-top: 8px;
 	}
 
-	.nav-cel ul{
+	.nav-cel{
 		display: flex;
 		flex-flow:column nowrap;
 		background: #56CC9D;
@@ -184,14 +187,28 @@ html{
 		right: 0px;
 	}
 
-	.nav-cel{
-		display: fixed;
-		float:left;
+	.active{
+		background: #b456cc;
+		visibility: hidden;
 	}
 
-	.esconder {
-		overflow:hidden;
+
+		
+}
+
+.anime {
+	animation: slidebaixo 3s ease;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes slidebaixo {
+	from{
+		transform: translate3d(0px, 50px, 0px);
 		opacity: 0;
 	}
-		
+	to{
+		transform: translate3d(0px, 0px, 0px);
+		opacity: 1;
+	}
 }

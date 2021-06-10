@@ -58,7 +58,7 @@ $('.botao_ativar').on('mouseenter', function(){
 })
 
 
-$('div.menu-cel').on('click', function(){
+/* $('div.menu-cel').on('click', function(){
     $('.navegacao').toggle('.nav-cel');
 })
 $('div.menu-cel').each(function(){
@@ -66,13 +66,57 @@ $('div.menu-cel').each(function(){
 })
 
 console.log(window.screen.width)
-
+ */
 
 document.body.onresize = function() {
-    if (document.body.clientWidth > 600) {
-        $('.nav-cel').show()
+    if (document.body.clientWidth < 600) {
+        /* $('.nav-cel').attr('style', 'display: block') */
+        /* $('.navegacao').addClass('nav-cel') */
     }
-    if (document.body.clientWidth <= 600) {
-        $('.nav-cel').hide()
-    }
+    
 };
+
+/* 
+$('.menu-cel').on('click', function(){
+    if($(this).hasClass('nav-cel')) {
+        console.log('aa')
+        $('.navegacao').removeClass('nav-cel')
+    } else {
+        console.log('bb')
+        $('.navegacao').addClass('nav-cel')
+    }
+}) */
+
+$('.menu-cel').on('click', function(){
+    if($('.nav-cel').parent().hasClass('active')) {
+        $('.nav-cel').parent().removeClass('active')
+    } else {
+        $('.nav-cel').parent().addClass('active')
+    }
+})
+
+console.log($(window).scrollTop())
+
+$('[data-anime="scroll"]').each(function(){
+    console.log($(this).offset().top);
+    
+})
+
+
+$(window).on('scroll', function(){
+    $('[data-anime="scroll"]').each(function(){
+        var baixo_item = $(this).offset().top;
+        var altura_scroll_cima =  $(window).scrollTop()
+
+        console.log(baixo_item)
+        console.log(altura_scroll_cima)
+        
+
+        if(altura_scroll_cima < baixo_item){
+            $(this).addClass('anime')
+        } else {
+            $(this).removeClass('anime')
+        }
+    })
+
+})

@@ -73,13 +73,20 @@ $('.menu-cel').on('click', function(){
 // Animação no scroll para efeito de transform com opaciti da classe anime
 $(window).on('scroll', function(){
     // Elementos com data-anime
+    efeito_scroll();
+})
+
+function efeito_scroll(){
     $('[data-anime="scroll"]').each(function(){
         // Pegar posições da tela
         var baixo_item = $(this).offset().top;
         var altura_scroll_cima =  $(window).scrollTop()+1000
 
-        if(altura_scroll_cima > baixo_item) $(this).addClass('anime')
-               
-        $(this).removeClass('anime')
+        if(altura_scroll_cima > baixo_item){
+            $(this).addClass('anime')
+        } else {
+            $(this).removeClass('anime')
+        }     
     })
-})
+}
+efeito_scroll();
